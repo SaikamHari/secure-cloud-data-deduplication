@@ -1,0 +1,48 @@
+﻿/build/
+/dist/
+/out/
+/nbproject/private/
+/.vscode/
+*.log
+*.tmp
+*.backup
+*.backup-*
+*.before-*
+.env
+.env.*
+!.env.example
+
+# Exclude unverified database or project data file
+/secure
+
+# Local security-review backups
+/encoding-fix-backup/
+/mail-credentials-backup-*/
+/*-backup/
+/*-backup-*/
+
+# Local credential review files
+/Dbconnection-review.txt
+
+# Local deployment configuration
+/nbproject/ant-deploy.xml
+
+# Windows-generated files
+Thumbs.db
+Desktop.ini
+
+# Compiled Java files
+*.class
+
+# Temporary database test files
+/DbTest.java
+/DbTest.class
+
+# NetBeans private configuration
+/nbproject/private.properties
+
+# Exclude deployment configuration with credential references
+/nbproject/ant-deploy.xml
+
+# Local project-properties backup
+/nbproject/project.properties.pre-github-backup

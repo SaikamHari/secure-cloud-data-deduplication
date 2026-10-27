@@ -1,0 +1,107 @@
+﻿/* Login page styling */
+#content fieldset {
+  box-sizing: border-box;
+  min-height: 430px;
+  height: auto !important;
+  padding: 28px 22px;
+  border: 1px solid #d5e4f3;
+  border-radius: 16px;
+  background-color: #f4f8fd !important;
+  background-image: none !important;
+  box-shadow: 0 10px 28px rgba(27, 55, 90, 0.10);
+}
+
+#content fieldset h1 {
+  margin: 4px 0 26px;
+  color: #123b65 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 28px !important;
+}
+
+#content form input[type="text"],
+#content form input[type="password"] {
+  box-sizing: border-box;
+  display: block;
+  width: min(100%, 320px) !important;
+  height: 46px !important;
+  margin: 0 auto 18px;
+  padding: 10px 14px;
+  color: #263445;
+  background: #ffffff !important;
+  border: 1px solid #cbd8e7;
+  border-radius: 8px;
+  font: 15px "Segoe UI", Arial, sans-serif;
+}
+
+#content form input[type="text"]:focus,
+#content form input[type="password"]:focus {
+  outline: 2px solid #8bc9f0;
+  border-color: #087ac1;
+}
+
+#content form input[type="submit"],
+#content form input[type="reset"] {
+  min-height: 42px;
+  margin: 4px 5px 18px;
+  padding: 9px 20px;
+  width: auto !important;
+  color: #ffffff;
+  background: #087ac1 !important;
+  background-image: none !important;
+  border: 0;
+  border-radius: 8px !important;
+  font: 600 14px "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+}
+
+#content form input[type="reset"] {
+  background: #526174 !important;
+}
+
+#content form input[type="submit"]:hover {
+  background: #065f98 !important;
+}
+
+#content form label,
+#content form a {
+  color: #123b65 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 15px;
+}
+
+#content form a {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  #content fieldset {
+    min-height: 0;
+    padding: 22px 14px;
+  }
+
+  #content fieldset h1 {
+    font-size: 24px !important;
+  }
+}
+/* Consistent login form buttons */
+#content form input[type="submit"],
+#content form input[type="reset"] {
+  display: inline-block;
+  min-width: 100px;
+  height: 42px;
+  margin: 4px 6px 18px;
+  padding: 10px 20px;
+  color: #ffffff !important;
+  background: #087ac1 !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font: 600 14px "Segoe UI", Arial, sans-serif !important;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(8, 122, 193, 0.18);
+}
+
+#content form input[type="submit"]:hover,
+#content form input[type="reset"]:hover {
+  background: #065f98 !important;
+}

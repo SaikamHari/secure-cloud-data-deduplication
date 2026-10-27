@@ -1,0 +1,595 @@
+
+@font-face {
+  font-family: "Yanone Kaffeesatz";
+  src: url('../fonts/YanoneKaffeesatz-Regular.eot');
+  src: local("Yanone Kaffeesatz"),
+       url('../fonts/YanoneKaffeesatz-Regular.ttf');
+}
+
+@font-face {
+  font-family: "News Cycle";
+  src: url('../fonts/NewsCycle-Regular.eot');
+  src: local("News Cycle"),
+       url('../fonts/NewsCycle-Regular.ttf');
+}
+
+html {
+  height: 100%;
+  background: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML5 elements */
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+body {
+  font: normal 0.80em Arial, sans-serif;
+  background: #ffffff;
+  color: #333333;
+  min-height: 100%;
+}
+
+p {
+  padding: 0 0 20px 0;
+  line-height: 1.7em;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #263238;
+  letter-spacing: 0;
+  padding: 0 0 5px 0;
+}
+
+h1, h2, h3 {
+  font: normal 170% "News Cycle", Arial, sans-serif;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;
+  color: #263238;
+}
+
+h2 {
+  font-size: 160%;
+  padding: 9px 0 5px 0;
+  color: #263238;
+}
+
+h3 {
+  font-size: 140%;
+  padding: 5px 0 0 0;
+}
+
+h4, h6 {
+  color: #263238;
+  padding: 0 0 5px 0;
+  font: normal 130% Arial, sans-serif;
+}
+
+h5 {
+  color: #555555;
+  font: italic 95% Arial, sans-serif;
+  letter-spacing: normal;
+  padding: 0 0 15px 0;
+}
+
+a, a:hover {
+  outline: none;
+  text-decoration: underline;
+  color: #087ac1;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #005b96;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 10px 20px 0 20px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+ul {
+  margin: 2px 0 22px 17px;
+}
+
+ul li {
+  list-style-type: circle;
+  margin: 0 0 6px 0;
+  padding: 0 0 4px 5px;
+  line-height: 1.5em;
+}
+
+ol {
+  margin: 8px 0 22px 20px;
+}
+
+ol li {
+  margin: 0 0 11px 0;
+}
+
+.left {
+  float: left;
+  width: auto;
+  margin-right: 10px;
+}
+
+.right {
+  float: right;
+  width: auto;
+  margin-left: 10px;
+}
+
+.center {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#main, nav, #container, #logo, #site_content, footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main {
+  margin: 5px auto;
+  width: 930px;
+  max-width: 100%;
+  background: #ffffff;
+  padding-bottom: 30px;
+}
+
+header {
+  background: #ffffff;
+  min-height: 150px;
+}
+
+#logo {
+  width: 300px;
+  min-height: 100px;
+  background: transparent;
+  color: #263238;
+  padding: 0 0 0 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+#logo h1, #logo h2 {
+  font: normal 320% "News Cycle", Arial, sans-serif;
+  border-bottom: 0;
+  text-transform: none;
+  margin-left: -20px;
+  padding: 0;
+}
+
+#logo_text h1,
+#logo_text h1 a,
+#logo_text h1 a:hover {
+  padding: 0;
+  color: #263238;
+  text-decoration: none;
+}
+
+#logo_text h1 a .logo_colour {
+  color: #087ac1;
+}
+
+#logo_text a:hover .logo_colour {
+  color: #005b96;
+}
+
+#logo_text h2 {
+  font-size: 140%;
+  padding: 0;
+  color: #555555;
+}
+
+nav {
+  height: 44px;
+  width: 928px;
+  max-width: 100%;
+  float: right;
+  margin: -20px auto 20px auto;
+  color: #333333;
+  background: #f4f7fa;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+#site_content {
+  width: 930px;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 20px auto;
+  background: #ffffff;
+}
+
+#sidebar_container {
+  float: right;
+  width: 450px;
+  max-width: 100%;
+  padding: 0;
+  min-height: 450px;
+}
+
+#content {
+  text-align: left;
+  width: 440px;
+  max-width: 100%;
+  margin: 0;
+  float: left;
+  padding: 0 20px 20px 20px;
+}
+
+#content ul {
+  margin: 2px 0 22px 0;
+}
+
+#content ul li,
+.sidebar ul li {
+  list-style-type: none;
+  background: url(../images/bullet.png) no-repeat;
+  margin: 0;
+  padding: 0 0 4px 28px;
+  line-height: 1.5em;
+}
+
+#blog_container h4 {
+  font: normal 170% "News Cycle", Arial, sans-serif;
+  margin: 0 0 15px 0;
+  padding: 5px 0;
+}
+
+#blog_container h4.select {
+  width: 475px;
+}
+
+.blog {
+  background: url(../images/calendar.png) no-repeat;
+  width: 54px;
+  height: 46px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.blog h2 {
+  font: normal 90% Arial, sans-serif;
+  text-shadow: none;
+  text-align: center;
+  margin: 0;
+  padding: 4px 0 0 0;
+  color: #ffffff;
+}
+
+.blog h3 {
+  font: 140% Arial, sans-serif;
+  text-shadow: none;
+  margin: -5px 0 0 0;
+  text-align: center;
+  color: #222222;
+}
+
+footer {
+  width: 928px;
+  max-width: 100%;
+  font: 140% "News Cycle", Arial, sans-serif;
+  min-height: 45px;
+  height: auto;
+  padding: 9px 0 15px 0;
+  color: #666666;
+  text-align: center;
+  background: #f4f7fa;
+  border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+  line-height: 1.7em;
+  padding: 0 0 10px 0;
+}
+
+footer a {
+  color: #087ac1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #005b96;
+  text-shadow: none;
+  text-decoration: underline;
+}
+
+.form_settings {
+  margin: 15px 0 0 0;
+}
+
+.form_settings p {
+  padding: 0 0 4px 0;
+}
+
+.form_settings span {
+  float: left;
+  width: 100px;
+  text-align: left;
+}
+
+.form_settings input,
+.form_settings textarea {
+  padding: 5px;
+  width: 299px;
+  max-width: 100%;
+  font: 100% Arial, sans-serif;
+  border: 1px solid #d5d5d5;
+  background: #ffffff;
+  color: #333333;
+  border-radius: 7px;
+}
+
+.form_settings .submit {
+  font: 150% "Yanone Kaffeesatz", Arial, sans-serif;
+  border: 1px solid #d5d5d5;
+  width: 99px;
+  margin: 0 0 0 212px;
+  height: 33px;
+  padding: 2px 0 3px 0;
+  cursor: pointer;
+  background: #eaf4fc;
+  color: #222222;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+  text-shadow: none;
+}
+
+.form_settings textarea,
+.form_settings select {
+  font: 100% Arial, sans-serif;
+  width: 299px;
+  max-width: 100%;
+}
+
+.form_settings select {
+  width: 310px;
+  max-width: 100%;
+}
+
+.form_settings .checkbox {
+  margin: 4px 0;
+  padding: 0;
+  width: 14px;
+  border: 0;
+  background: transparent;
+}
+
+.separator {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #d9dfe5;
+  border-bottom: 1px solid #ffffff;
+  margin: 0 0 20px 0;
+}
+
+table {
+  margin: 10px 0 30px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tr th,
+table tr td {
+  background: #168ac0;
+  color: #ffffff;
+  padding: 7px 8px;
+  text-align: left;
+}
+
+table tr td {
+  background: #eaf5fa;
+  color: #333333;
+  border-top: 1px solid #ffffff;
+}
+
+ul.images {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+ul.images li {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  list-style: none;
+}
+
+ul.images li.show {
+  z-index: 20;
+}
+
+ul img {
+  border: none;
+}
+
+/* SooperFish menu */
+html body ul.sf-menu ul,
+html body ul.sf-menu ul li {
+  width: 220px;
+}
+
+html body ul.sf-menu ul ul {
+  margin: 0 0 0 220px;
+}
+
+ul.sf-menu,
+ul.sf-menu * {
+  margin: 0;
+  padding: 0;
+}
+
+ul.sf-menu {
+  display: block;
+  position: relative;
+}
+
+ul.sf-menu li {
+  display: block;
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+ul.sf-menu li:hover {
+  visibility: inherit;
+}
+
+ul.sf-menu a {
+  display: block;
+  position: relative;
+}
+
+ul.sf-menu ul {
+  position: absolute;
+  left: -999999px;
+  width: 220px;
+  top: auto;
+}
+
+ul.sf-menu ul a {
+  zoom: 1;
+}
+
+ul.sf-menu ul li {
+  float: left;
+  width: 220px;
+}
+
+ul.sf-menu ul ul {
+  top: 0;
+  margin: 0 0 0 220px;
+}
+
+ul.sf-menu li:hover ul,
+ul.sf-menu li:focus ul,
+ul.sf-menu li.sf-hover ul,
+ul.sf-menu ul li:hover ul,
+ul.sf-menu ul li:focus ul,
+ul.sf-menu ul li.sf-hover ul,
+ul.sf-menu ul ul li:hover ul,
+ul.sf-menu ul ul li:focus ul,
+ul.sf-menu ul ul li.sf-hover ul,
+ul.sf-menu ul ul ul li:hover ul,
+ul.sf-menu ul ul ul li:focus ul,
+ul.sf-menu ul ul ul li.sf-hover ul {
+  left: auto;
+}
+
+ul.sf-menu li:hover ul ul,
+ul.sf-menu li:focus ul ul,
+ul.sf-menu li.sf-hover ul ul,
+ul.sf-menu ul li:hover ul ul,
+ul.sf-menu ul li:focus ul ul,
+ul.sf-menu ul li.sf-hover ul ul,
+ul.sf-menu ul ul li:hover ul ul,
+ul.sf-menu ul ul li:focus ul ul,
+ul.sf-menu ul ul li.sf-hover ul ul,
+ul.sf-menu ul ul ul li:hover ul ul,
+ul.sf-menu ul ul ul li:focus ul ul,
+ul.sf-menu ul ul ul li.sf-hover ul ul {
+  left: -999999px;
+}
+
+span.sf-arrow {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  display: block;
+  background: url(../images/arrows-black.png) no-repeat 0 0;
+  overflow: hidden;
+  font-size: 1px;
+}
+
+ul ul span.sf-arrow {
+  right: 5px;
+  top: 20px;
+  background-position: 0 100%;
+}
+
+/* Navigation menu */
+ul#nav {
+  float: left;
+}
+
+ul#nav ul {
+  background: #f4f7fa;
+  margin-top: 4px;
+  padding-bottom: 15px;
+  border: 1px solid #e2e8f0;
+}
+
+ul#nav li a {
+  padding: 7px 25px 6px 25px;
+  font: 140% "News Cycle", Arial, sans-serif;
+  text-decoration: none;
+  color: #333333;
+  margin-right: 2px;
+}
+
+ul#nav li a:hover,
+ul#nav li a:focus,
+ul#nav li.selected a,
+ul#nav li.selected a:hover,
+ul#nav li.selected a:focus {
+  color: #087ac1;
+  text-shadow: none;
+}
+
+ul#nav ul li a {
+  color: #333333;
+}
+
+ul#nav ul li a:hover {
+  color: #087ac1;
+  margin-right: 2px;
+}
+
+/* Image transitions */
+ul#images {
+  margin: 0 15px 10px 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+ul#images li {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  float: left;
+  width: 155px;
+  height: 300px;
+}
+
+/* Keep the page background white even if another rule overrides it */
+html,
+body,
+#main,
+#site_content {
+  background-color: #ffffff;
+}

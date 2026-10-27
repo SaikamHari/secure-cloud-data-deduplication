@@ -1,0 +1,91 @@
+﻿/* Auditor File Approval page */
+#content {
+  padding: 24px 18px;
+}
+
+#content table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: 1px solid #d5e2ef;
+  background: #ffffff;
+  position: static;
+  left: auto;
+  box-shadow: 0 8px 24px rgba(27, 55, 90, 0.08);
+}
+
+#content table caption {
+  padding: 12px 8px 22px;
+  caption-side: top;
+}
+
+#content table caption h2 {
+  margin: 0;
+  color: #123b65 !important;
+  font: 700 25px "Segoe UI", Arial, sans-serif !important;
+}
+
+#content table tr {
+  height: auto;
+  background: #ffffff;
+}
+
+#content table tr:first-child {
+  background: #eaf3fb !important;
+}
+
+#content table td {
+  padding: 14px 12px;
+  border: 1px solid #d5e2ef;
+  color: #263445;
+  text-align: center;
+  font: 14px "Segoe UI", Arial, sans-serif;
+}
+
+#content table tr:first-child td {
+  color: #123b65;
+  font-weight: 700;
+}
+
+#content table tr:not(:first-child):nth-child(even) {
+  background: #f5f9fd;
+}
+
+#content table tr:not(:first-child):hover {
+  background: #eaf4ff;
+}
+
+#content table a {
+  display: inline-block;
+  padding: 9px 13px;
+  border-radius: 7px;
+  background: #087ac1;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#content table a:hover {
+  background: #075b91;
+}
+
+@media (max-width: 700px) {
+  #content {
+    padding: 12px 6px;
+    overflow-x: auto;
+  }
+
+  #content table {
+    min-width: 650px;
+  }
+
+  #content table caption h2 {
+    font-size: 20px !important;
+  }
+
+  #content table td {
+    padding: 10px 8px;
+  }
+}
