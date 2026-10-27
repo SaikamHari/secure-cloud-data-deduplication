@@ -1,43 +1,26 @@
 ﻿# Secure Cloud Data Deduplication with Efficient Re-encryption
 
-A Java-based web application focused on cloud file management, data deduplication, secure file access, and re-encryption concepts.
+A Java-based web application exploring cloud file management, data deduplication, secure file access, and re-encryption concepts.
 
 ## 📌 Project Overview
 
-This project demonstrates a web-based approach to managing files in a cloud-storage environment. It includes Java application components, JSP-based web pages, database connectivity, and encryption-related utilities.
+This project demonstrates a web-based approach to managing files in a cloud-storage environment. It uses Java application components, JSP pages, database connectivity, and encryption-related utilities.
 
-The application includes workflows for users, administrators, and cloud-provider-related operations. It is intended for educational purposes and further development in secure cloud storage.
+The application includes workflows for users, cloud providers, and auditors. It is intended for educational purposes and further development in secure cloud storage.
 
 ## ✨ Features
 
-### 🔐 User and Account Management
-- User registration and login pages
-- Administrator login workflow
-- Cloud-provider login workflow
-- Account-related operations
+- **User and Account Management:** Registration, login, and account-related workflows.
+- **Cloud File Management:** File upload, download, and management pages.
+- **Encryption and Key Handling:** Encryption/decryption utilities and re-encryption-related concepts.
+- **Auditing and Administration:** Auditor interfaces, file requests, and approval-related workflows.
 
-### ☁️ Cloud File Management
-- File upload and download workflows
-- File access and management pages
-- Cloud-provider-related operations
-- File-related status and request pages
-
-### 🔒 Encryption and Key Handling
-- Encryption and decryption components
-- Key-handling utility classes
-- Re-encryption-related project concepts
-
-### 🛡️ Auditing and Administration
-- Auditing-related pages
-- Administrative workflows
-- File request and approval-related pages
-
-> Feature descriptions should be confirmed against the running application before presenting this project as production-ready.
+*Feature descriptions should be verified against the running application. This project has not been presented as production-ready.*
 
 ## 🛠️ Technologies Used
 
 - **Language:** Java
-- **Web interface:** JavaServer Pages (JSP), HTML, CSS, and Java web components
+- **Web interface:** JavaServer Pages (JSP), HTML, CSS
 - **Build tool:** Apache Ant
 - **IDE configuration:** NetBeans
 - **Database:** MySQL
@@ -47,43 +30,39 @@ The application includes workflows for users, administrators, and cloud-provider
 ## 🏗️ System Architecture
 
 ```text
-       ┌───────────────────────────┐
-       │       Web Browser         │
-       │     JSP / HTML Pages      │
-       └─────────────┬─────────────┘
-                     │
-                     ▼
-       ┌───────────────────────────┐
-       │      Java Web Layer       │
-       │ Login / File Operations   │
-       │ Administration / Auditing │
-       └─────────────┬─────────────┘
-                     │
-            ┌────────┴────────┐
-            ▼                 ▼
-   ┌─────────────────┐  ┌─────────────────┐
-   │ Encryption and  │  │  MySQL Database │
-   │ Key Utilities   │  │   Persistence   │
-   └─────────────────┘  └─────────────────┘
+             Web Browser
+            JSP / HTML Pages
+                   |
+                   v
+             Java Web Layer
+       Login / File Operations
+      Administration / Auditing
+                   |
+             +-----+-----+
+             |           |
+             v           v
+      Encryption and   MySQL Database
+      Key Utilities    Persistence
 ```
 
-*Conceptual overview; confirm the exact component interactions in the source code.*
+*Conceptual overview. Confirm the exact component interactions in the source code.*
 
 ## 📁 Project Structure
 
 ```text
 Secure-Cloud-Data-Deduplication/
 ├── src/
-│   └── java/             # Java source files
+│   └── java/              # Java source files
 ├── web/
 │   ├── WEB-INF/
-│   │   └── web.xml       # Web application configuration
+│   │   └── web.xml        # Web application configuration
 │   ├── META-INF/
-│   │   └── context.xml   # Context configuration
-│   └── *.jsp             # Web interface pages
-├── nbproject/            # NetBeans project configuration
-├── build.xml             # Apache Ant build file
+│   │   └── context.xml    # Context configuration
+│   └── *.jsp              # JSP pages
+├── nbproject/             # NetBeans project configuration
+├── build.xml              # Apache Ant build file
 ├── .gitignore
+├── screenshots/
 └── README.md
 ```
 
@@ -91,38 +70,34 @@ Secure-Cloud-Data-Deduplication/
 
 ### Prerequisites
 
-Install the following tools:
-
-- Java JDK compatible with the project (Java 8 was used for validation)
+- Java JDK compatible with the project; Java 8 was used for validation.
 - Apache Ant
-- Apache Tomcat compatible with the application
+- Compatible Apache Tomcat installation
 - MySQL Server
 - MySQL JDBC driver
 
-### 1. Get the project
-
-After the repository is published, clone it using its actual GitHub URL:
+### 1. Clone the repository
 
 ```powershell
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <YOUR_PROJECT_FOLDER>
+git clone https://github.com/SaikamHari/secure-cloud-data-deduplication.git
+cd secure-cloud-data-deduplication
 ```
 
 ### 2. Configure the database
 
 1. Start MySQL.
-2. Create the database required by the application.
-3. Prepare the required tables and test data.
+2. Identify the database name, tables, and required data from the source code or database setup.
+3. Create the required database and tables.
 4. Configure the database connection locally.
-5. Verify that the MySQL JDBC driver is available to the application.
+5. Ensure the MySQL JDBC driver is available to the application.
 
-The required schema must be confirmed from the project's SQL files or existing database setup.
+The exact schema and initialization steps must be confirmed from the project files.
 
-### 3. Configure local credentials
+### 3. Configure credentials
 
-Before running the application, review the database connection, encryption-key utilities, mail configuration, and `web/META-INF/context.xml`.
+Review the database connection, encryption-key utilities, mail configuration, and `web/META-INF/context.xml`.
 
-Use local configuration or environment variables for credentials where the code supports them. Never commit real passwords, private keys, or API credentials.
+Use environment variables or local configuration for credentials where supported. Never commit real passwords, private keys, or API credentials.
 
 ### 4. Build the application
 
@@ -132,80 +107,89 @@ From the project root, run:
 ant compile
 ```
 
-If the build fails, check the Java version, Ant configuration, dependencies, and any files locked by the IDE or Tomcat.
+If the build fails, check the Java version, Ant configuration, dependencies, and whether any required files are locked.
 
 ### 5. Deploy to Tomcat
 
-Use the deployment target defined in `build.xml`, or configure deployment through the project's NetBeans setup.
+Use the deployment target configured in `build.xml`, or configure deployment through NetBeans.
 
-Start Tomcat and open the application's configured local URL.
+Start Tomcat and open the configured application URL. The exact deployment target and URL should be confirmed from the project configuration.
 
-The exact deployment target and URL should be confirmed from the project configuration.
+## 📸 Application Screenshots
 
-## 📸 Screenshots
+The following screenshots are included in the repository.
 
-Add genuine screenshots of the running application to the `screenshots/` directory.
+### Home Page
 
-Suggested screenshots:
+![Application Home Page](screenshots/home-page.jpeg)
 
-| Screenshot | What to capture |
+### User Interface
+
+| Login | Registration |
 |---|---|
-| `LandingPage.png` | Application home page |
-| `Login.png` | Login page with no real credentials |
-| `Dashboard.png` | Main page after test login |
-| `FileUpload.png` | File upload workflow |
-| `FileDownload.png` | File download workflow |
-| `Admin.png` | Administrative page using test data |
+| ![User Login](screenshots/user-login.jpeg) | ![User Registration](screenshots/user-registration.jpeg) |
 
-Once the screenshots exist, display them here by adding Markdown image links. For example:
+### Cloud Provider Interface
 
-```markdown
-![Application home page](screenshots/LandingPage.png)
-```
+| Login | Home |
+|---|---|
+| ![Cloud Login](screenshots/cloud-login.jpeg) | ![Cloud Home](screenshots/cloud-home.jpeg) |
 
-Do not include real passwords, personal records, private keys, or sensitive database details in screenshots.
+| Files | User Management |
+|---|---|
+| ![Cloud Files](screenshots/cloud-files.jpeg) | ![Cloud Users](screenshots/cloud-users.jpeg) |
+
+### Auditor Interface
+
+| Login | Home |
+|---|---|
+| ![Auditor Login](screenshots/auditor-login.jpeg) | ![Auditor Home](screenshots/auditor-home.jpeg) |
+
+| Uploads | Downloads |
+|---|---|
+| ![Auditor Uploads](screenshots/auditor-uploads.jpeg) | ![Auditor Downloads](screenshots/auditor-downloads.jpeg) |
+
+### File Approval
+
+![Auditor File Approval](screenshots/auditor-file-approval.jpeg)
 
 ## 🔒 Security Considerations
 
 - Keep database credentials outside tracked source files.
 - Never commit email passwords, API tokens, or private encryption keys.
-- Use synthetic test accounts and test files for demonstrations.
-- Review encryption and key-management logic before handling real data.
-- Check the repository history for previously committed secrets before making the repository public.
-- Treat this project as educational unless a security review confirms otherwise.
+- Use synthetic test accounts and files for demonstrations.
+- Review encryption algorithms and key-management logic before handling real data.
+- Check the repository history for previously committed secrets.
+- Use secure transfer protocols instead of plain FTP where file transfer is involved.
+- Treat the project as educational unless it has undergone an appropriate security review.
 
 ## 🧪 Testing and Validation
 
-Before publishing, verify:
-
-- [ ] The project builds successfully.
-- [ ] The application starts in the intended Tomcat environment.
-- [ ] Database connectivity works.
-- [ ] Login and file workflows work with test data.
-- [ ] Encryption and decryption workflows are tested.
-- [ ] Error handling is checked.
-- [ ] Credentials and private configuration are excluded from Git.
+- [ ] Confirm the project builds successfully.
+- [ ] Verify that the application starts in the intended Tomcat environment.
+- [ ] Test database connectivity.
+- [ ] Test login and file workflows with test data.
+- [ ] Test encryption and decryption workflows.
+- [ ] Review error handling.
+- [ ] Confirm credentials and private configuration are excluded from Git.
 
 ## 🎯 Future Improvements
 
-- Externalize hardcoded credentials and encryption keys.
+- Externalize credentials and encryption keys.
 - Document database schema creation and sample data.
 - Add automated tests for file operations and encryption workflows.
 - Improve input validation and error handling.
-- Add verified application screenshots.
 - Document reproducible build and deployment steps.
 - Review cryptographic choices and key management.
 
 ## 👨‍💻 Developer
 
-**Developer:** Saikam Hari
+**Saikam Hari**  
+Java Development | Secure Cloud-Storage Concepts
 
-**Focus:** Java development and secure cloud-storage concepts
-
-GitHub: [SaikamHari](https://github.com/SaikamHari)
-
-LinkedIn: [Hari Saikam](https://www.linkedin.com/in/hari-saikam/)
+- GitHub: https://github.com/SaikamHari
+- LinkedIn: https://www.linkedin.com/in/hari-saikam/
 
 ## 📄 License
 
-No license has been selected for this repository yet. Choose and add an appropriate license before granting others permission to reuse or distribute the code.
+No license has been selected for this repository yet. Add an appropriate license before granting others permission to reuse or distribute the code.
